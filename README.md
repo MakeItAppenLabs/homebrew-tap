@@ -8,8 +8,13 @@ The classic ASCII-art aquarium as a macOS screen saver
 ([source and releases](https://github.com/MakeItAppenLabs/asciiquarium-saver)).
 
 ```sh
+brew trust --cask makeitappenlabs/tap/asciiquarium-saver
 brew install --cask makeitappenlabs/tap/asciiquarium-saver
 ```
+
+The first line is needed once. Homebrew 7 won't load a cask from a third-party tap until you trust it,
+and without it `brew upgrade` can't update the screen saver later. It trusts only this cask, not
+everything in the tap.
 
 Then open System Settings, choose Screen Saver, and select Asciiquarium (under Other).
 
